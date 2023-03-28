@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="popup.css">
+  <link href='https://fonts.googleapis.com/css?family=Vazirmatn' rel='stylesheet'>
+</head>
+
+<body>
+  <h1>OpenAI Article Summarizer</h1>
+  <div>
+    <label for="prefix">Prompt prefix:</label>
+    <input type="text" id="prefix" value="What is it about?" placeholder="Enter prefix">
+  </div>
+  <div id="button-container">
+    <button id="summarize">Summarize Selected Text</button>
+  </div>
+
+  <div id="loading">Loading...</div>
+  <div id="summary"></div>
+  <details>
+    <summary>Configuration Settings</summary>
+    <div>
+      <label for="api-token">API Token:</label>
+      <input type="password" id="api-token" placeholder="Enter your API token">
+    </div>
+    <div>
+      <label for="model-select">Model:</label>
+      <select id="model-select">
+        <option value="text-davinci-003">text-davinci-003</option>
+        <option value="text-davinci-002">text-davinci-002</option>
+        <option value="davinci">Davinci</option>
+        <option value="curie">Curie</option>
+        <option value="babbage">Babbage</option>
+        <option value="ada">Ada</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="max-tokens">Max Tokens:</label>
+      <input type="number" id="max-tokens" value="1000" placeholder="Enter max tokens">
+    </div>
+
+  </details>
+  <script src="popup.js"></script>
+</body>
+
+</html>
